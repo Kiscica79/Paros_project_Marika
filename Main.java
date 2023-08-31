@@ -26,6 +26,7 @@ public class Main {
         int[] array = {25, 2, 5, 9, 7, 4, 3};
         System.out.println("The biggest number is " + calculateMax(array));
         System.out.println("The number of the odd numbers: " + calculateOddNumbers(array));
+        System.out.println("The sum is " + calculateSumEvenNumber(array));
 
     }
 
@@ -69,6 +70,20 @@ public class Main {
             }
         }
         return minNumber;
+    }
+
+    public static int calculateSumEvenNumber(int[] array){
+        if(array.length == 0){
+            throw new IllegalArgumentException("The array must not be null or empty.");
+        }
+        int evenSum = 0;
+        for(int num : array){
+            if(num % 2 == 0){
+                evenSum += num;
+            }
+
+        }
+        return evenSum;
     }
 
 }
