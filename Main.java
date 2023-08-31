@@ -30,7 +30,11 @@ public class Main {
 
         int parosDb = countParosDb(tomb);
         System.out.println("A tömbben található páros számok száma: " + parosDb);
+
+        int paratlanOsszeg = countParatlanOsszeg(tomb);
+        System.out.println("A tömbben található páratlan számok összege: " + paratlanOsszeg);
     }
+
 
     public static int calculateMax(int[] array) {
         if (array == null || array.length == 0) {
@@ -98,4 +102,20 @@ public class Main {
         return parosDb;
     }
 
-}
+    public static int countParatlanOsszeg(int[] tomb) {
+        int paratlanOsszeg = 0;
+        for (int i = 0; i < tomb.length; i++) {
+            if (tomb[i] % 2 != 0) {
+                paratlanOsszeg += tomb[i];
+            }
+        }
+        return paratlanOsszeg;
+    }
+
+
+
+
+
+
+
+        }
