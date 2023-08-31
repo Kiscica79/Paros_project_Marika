@@ -22,11 +22,12 @@ public class Main {
         System.out.println("A tömb minimuma: " + minimum);
 
 
-
         int[] array = {25, 2, 5, 9, 7, 4, 3};
         System.out.println("The biggest number is " + calculateMax(array));
         System.out.println("The number of the odd numbers: " + calculateOddNumbers(array));
 
+        int parosDb = countParosDb(tomb);
+        System.out.println("A tömbben található páros számok száma: " + parosDb);
     }
 
     public static int calculateMax(int[] array) {
@@ -69,6 +70,16 @@ public class Main {
             }
         }
         return minNumber;
+    }
+
+    public static int countParosDb(int[] tomb) {
+        int parosDb = 0;
+        for (int i = 0; i < tomb.length; i++) {
+            if (tomb[i] % 2 == 0) {
+                parosDb++;
+            }
+        }
+        return parosDb;
     }
 
 }
